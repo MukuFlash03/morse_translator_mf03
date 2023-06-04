@@ -29,7 +29,8 @@ class WordCounter {
             // Morse to English Decoding
             let morseCode = this.inputText.value;
             wordStat.code = this.decodeMorse(morseCode);
-            wordStat.codeLen = 5;
+            // wordStat.codeLen = 5;
+            wordStat.codeLen = wordStat.code.replace(/\s/g, "").length;
         }
         else if (this.menuVal === 'english') {
             // English to Morse Encoding
